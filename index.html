@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BOOKSTORE</title>
+    <link rel="icon" href="icons/logo.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body theme="dark">
+    <header>
+        <div class="container">
+            <div class="logo el">
+                <svg width="2.5rem" height="2.5rem" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.08325 7.08332C7.08325 6.7076 7.23251 6.34727 7.49818 6.08159C7.76386 5.81591 8.1242 5.66666 8.49992 5.66666H11.3333C11.709 5.66666 12.0693 5.81591 12.335 6.08159C12.6007 6.34727 12.7499 6.7076 12.7499 7.08332V26.9167C12.7499 27.2924 12.6007 27.6527 12.335 27.9184C12.0693 28.1841 11.709 28.3333 11.3333 28.3333H8.49992C8.1242 28.3333 7.76386 28.1841 7.49818 27.9184C7.23251 27.6527 7.08325 27.2924 7.08325 26.9167V7.08332Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.75 7.08332C12.75 6.7076 12.8993 6.34727 13.1649 6.08159C13.4306 5.81591 13.7909 5.66666 14.1667 5.66666H17C17.3757 5.66666 17.7361 5.81591 18.0017 6.08159C18.2674 6.34727 18.4167 6.7076 18.4167 7.08332V26.9167C18.4167 27.2924 18.2674 27.6527 18.0017 27.9184C17.7361 28.1841 17.3757 28.3333 17 28.3333H14.1667C13.7909 28.3333 13.4306 28.1841 13.1649 27.9184C12.8993 27.6527 12.75 27.2924 12.75 26.9167V7.08332Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.08325 11.3333H12.7499" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.75 22.6667H18.4167" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.5544 6.46001L22.6484 5.70918C23.4445 5.51793 24.2534 5.97834 24.4645 6.74618L29.6991 25.755C29.7915 26.103 29.7506 26.473 29.5844 26.7924C29.4183 27.1118 29.1389 27.3577 28.8009 27.4819L28.6125 27.54L25.5185 28.2908C24.7224 28.4821 23.9134 28.0217 23.7024 27.2538L18.4678 8.24501C18.3754 7.897 18.4163 7.52706 18.5825 7.20763C18.7486 6.8882 19.028 6.6423 19.3659 6.51809L19.5544 6.46001Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.8333 12.75L25.4999 11.3333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22.6667 22.6667L28.2243 21.2783" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1>BOOKSTORE</h1>
+                <span>BS</span>
+            </div>
+            <div onclick="openMenu(this)" id="menu-bar" class="btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id='search-box' class="gray-el"> 
+                <input type="search" placeholder="Search"> 
+                <div id='search-icon'>
+                    <svg width="1.4rem" height="1.4rem" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path d="M2 6.66667C2 7.2795 2.12071 7.88634 2.35523 8.45252C2.58975 9.01871 2.93349 9.53316 3.36683 9.9665C3.80017 10.3998 4.31462 10.7436 4.88081 10.9781C5.447 11.2126 6.05383 11.3333 6.66667 11.3333C7.2795 11.3333 7.88634 11.2126 8.45252 10.9781C9.01871 10.7436 9.53316 10.3998 9.9665 9.9665C10.3998 9.53316 10.7436 9.01871 10.9781 8.45252C11.2126 7.88634 11.3333 7.2795 11.3333 6.66667C11.3333 6.05383 11.2126 5.447 10.9781 4.88081C10.7436 4.31462 10.3998 3.80017 9.9665 3.36683C9.53316 2.93349 9.01871 2.58975 8.45252 2.35523C7.88634 2.12071 7.2795 2 6.66667 2C6.05383 2 5.447 2.12071 4.88081 2.35523C4.31462 2.58975 3.80017 2.93349 3.36683 3.36683C2.93349 3.80017 2.58975 4.31462 2.35523 4.88081C2.12071 5.447 2 6.05383 2 6.66667Z" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 14L10 10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                    </svg>    
+                </div>
+                <div>
+                </div>              
+            </div>
+            <div id="header-btns">
+                <button onclick='changeTheme(this, true)' class="theme-changer gray-el" style="backdrop-filter: none;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                        <path d="M9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12Z" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 5V5.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 7V7.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19 12V12.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 17V17.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 19V19.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 17V17.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 12V12.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 7V7.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+                    </svg>
+                </button>
+                <div class="rounded-sides">
+                    <a href="" class="el main-el btn">Log in</a>
+                    <separator></separator>
+                    <a href="" class="el main-el btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="main-nav" class="el">
+        <div class="container hscroll">
+            <div>
+                <a href="">Home</a>
+                <div class="dropdown">
+                    <div class="head">
+                        Categories
+                        <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 9l6 6l6 -6"></path>
+                        </svg>
+                    </div>
+                    <div class="list">
+                        <div class="gray-el">
+                            <a href="">Arts & Photography</a>
+                            <a href="">Biographies & Memoirs</a>
+                            <a href="">Business & Money</a>
+                            <a href="">Calendars</a>
+                            <a href="">Children's Books</a>
+                            <a href="">Computers & Technology</a>
+                            <a href="">Cookbooks & Food</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="">New Releases</a>
+                <a href="">Best Sellers</a>
+                <a href="">Children's Books</a>
+                <a href="">Textbook</a>
+                <a href="">Exclusive</a>
+            </div>
+        </div>
+    </nav>    
+    <div id="menu" class="container el gray-el" style="display: none;">
+        <div>
+            <nav>
+                <a href="">Home</a>
+                <div onclick="toggleEl(this)" class="folddown">
+                    <div class="head">
+                        Categories
+                        <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 9l6 6l6 -6"></path>
+                        </svg>
+                    </div>
+                    <div class="list">
+                        <a href="">Arts & Photography</a>
+                        <a href="">Biographies & Memoirs</a>
+                        <a href="">Business & Money</a>
+                        <a href="">Calendars</a>
+                        <a href="">Children's Books</a>
+                        <a href="">Computers & Technology</a>
+                        <a href="">Cookbooks & Food</a>
+                    </div>
+                </div>
+                <a href="">New Releases</a>
+                <a href="">Best Sellers</a>
+                <a href="">Children's Books</a>
+                <a href="">Textbook</a>
+                <a href="">Exclusive</a>
+            </nav>
+            <div>
+                <div onclick='changeTheme(this, false)' class="theme-changer btn gray-el">
+                    Theme =
+                    <svg style="margin-left: 0.15rem;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                        <path d="M9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12Z" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 5V5.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 7V7.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19 12V12.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 17V17.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 19V19.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 17V17.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 12V12.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 7V7.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                    </svg>
+                    <svg style="margin-left: 0.15rem;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+                    </svg>
+                </div>
+                <a href="" class="btn gray-el">Log in</a>
+                <a href="" class="btn main-el">Sign up</a>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="scripts/script.js"></script>
+</html>
