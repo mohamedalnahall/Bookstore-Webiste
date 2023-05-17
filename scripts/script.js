@@ -44,7 +44,6 @@ const buttonClick = new Audio('sounds/button-click.mp3');
             setScroll(pos, hscroll, hscrollContent);
         });
         hscroll.addEventListener('touchstart', (e)=>{
-            e.preventDefault();  
             touchOffset = e.touches[0].clientX;
         });
         hscroll.addEventListener('touchmove', (e)=>{   
