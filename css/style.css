@@ -146,6 +146,7 @@ nav#main-nav {
     top: 5.065789rem;
     width: 100%;
     background-color: var(--background-color);
+    z-index: 100;
 }
 
 @media (max-width:620px) {
