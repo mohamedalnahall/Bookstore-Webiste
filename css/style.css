@@ -833,6 +833,7 @@ button.main-el:hover {
     background-size: cover;
     background-position: center;
     height: 100%;
+    width: 100%;
 }
 
 .slider>.dots {
@@ -866,7 +867,6 @@ button.main-el:hover {
     border-radius: 999rem;
     width: 3.5rem;
     height: 3.5rem;
-    /* backdrop-filter: blur(1.3rem) opacity(50%); */
     cursor: pointer;
     position: absolute;
     transform: translateY(-50%);
@@ -894,11 +894,27 @@ button.main-el:hover {
 
 /* #region landing-slider styling */
 .landing-slider {
-    height: 50rem;
+    height: 30rem;
 }
 
 .landing-slider>.content>div {
-    width: 100%;
+    background-image: url(../imgs/landing-slider-image.png);
+}
+
+@media (max-width:800px) {
+    .landing-slider {
+        height: 20rem;
+    }
+}
+
+@media (max-width:620px) {
+    .landing-slider {
+        height: 30rem;
+    }
+
+    .landing-slider>.content>div {
+        background-image: url(../imgs/landing-slider-mobile-image.png);
+    }
 }
 
 /* #endregion */
