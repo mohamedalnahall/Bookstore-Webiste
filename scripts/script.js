@@ -76,17 +76,17 @@ const buttonClick = new Audio('sounds/button-click.mp3');
     
     for (const slider of sliderElements) {
         const content = slider.querySelector(".content");
-        const slides = content.children;
+        const numSlides = content.children.length;
         const leftArrow = slider.querySelector(".left-arrow");
         const rightArrow = slider.querySelector(".right-arrow");
         const dots = slider.querySelector(".dots");
         let curr = 0;
 
-        content.style.width = slides.length + "00%";
+        content.style.width = numSlides + "00%";
         content.style.left = "-" + curr + "00%";
         leftArrow.style.display = "none";
         
-        for (let i = 0; i < slides.length; i++){
+        for (let i = 0; i < numSlides; i++){
             dots.appendChild(document.createElement("div"));
         }
         
@@ -107,7 +107,7 @@ const buttonClick = new Audio('sounds/button-click.mp3');
             dots.children.item(curr).classList.remove("curr-dot");
             curr++;
             dots.children.item(curr).classList.add("curr-dot");
-            if (curr === slides.length - 1) {
+            if (curr === numSlides - 1) {
                 rightArrow.style.display = "none";
             }
             leftArrow.style.removeProperty('display');

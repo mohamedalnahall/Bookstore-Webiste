@@ -829,6 +829,9 @@ button.main-el:hover {
 }
 
 .slider>.content>div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 100%;
 }
 
@@ -851,7 +854,6 @@ button.main-el:hover {
     height: 0.75rem;
     border-radius: 999rem;
     opacity: 0.5;
-    cursor: pointer;
 }
 
 .slider>.dots>.curr-dot {
