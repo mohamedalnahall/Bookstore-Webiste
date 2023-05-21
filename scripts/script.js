@@ -9,6 +9,7 @@ const buttonClick = new Audio('sounds/button-click.mp3');
     const menuBar = document.getElementById('menu-bar');
     const menu = document.getElementById('menu');
     const hscrollElements = document.getElementsByClassName("hscroll");
+    const sliderElements = document.getElementsByClassName("slider");
     
     var rtime;
     var timeout = false;
@@ -71,6 +72,47 @@ const buttonClick = new Audio('sounds/button-click.mp3');
             scrollEl.classList.remove('right-shadow');
         }
         contentEl.style.setProperty('margin-left',pos+"px");
+    }
+    
+    for (const slider of sliderElements) {
+        const content = slider.querySelector(".content");
+        const slides = content.children;
+        const leftArrow = slider.querySelector(".left-arrow");
+        const rightArrow = slider.querySelector(".right-arrow");
+        const dots = slider.querySelector(".dots");
+        let curr = 0;
+
+        content.style.width = slides.length + "00%";
+        content.style.left = "-" + curr + "00%";
+        leftArrow.style.display = "none";
+        
+        for (let i = 0; i < slides.length; i++){
+            dots.appendChild(document.createElement("div"));
+        }
+        
+        dots.children.item(curr).classList.add("curr-dot");
+
+        leftArrow.onclick = function () {
+            dots.children.item(curr).classList.remove("curr-dot");
+            curr--;
+            dots.children.item(curr).classList.add("curr-dot");
+            if (curr === 0) {
+                leftArrow.style.display = "none";
+            }
+            rightArrow.style.removeProperty('display');
+            content.style.left = "-" + curr + "00%";
+        }
+        
+        rightArrow.onclick = function () {
+            dots.children.item(curr).classList.remove("curr-dot");
+            curr++;
+            dots.children.item(curr).classList.add("curr-dot");
+            if (curr === slides.length - 1) {
+                rightArrow.style.display = "none";
+            }
+            leftArrow.style.removeProperty('display');
+            content.style.left = "-" + curr + "00%";
+        }
     }
 
     let removeMenuTimeout, duration;

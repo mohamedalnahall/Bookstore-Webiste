@@ -810,6 +810,97 @@ button.main-el:hover {
 
 /* #endregion */
 
+/* #region slider styling */
+.slider {
+    border-radius: 1.2rem;
+    overflow: clip;
+    position: relative;
+}
+
+.slider>.content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: left var(--main-trans);
+}
+
+.slider>.content>div {
+    height: 100%;
+}
+
+.slider>.dots {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider>.dots>div {
+    background-color: var(--background-color);
+    border: var(--layer3-gray) 1px solid;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 999rem;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.slider>.dots>.curr-dot {
+    opacity: 1;
+}
+
+.slider>.left-arrow,
+.slider>.right-arrow {
+    background-color: var(--background-color);
+    border-radius: 999rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    /* backdrop-filter: blur(1.3rem) opacity(50%); */
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+    box-shadow: 0 0.4rem 1.2rem 0.05rem var(--shadow);
+    top: 50%;
+}
+
+.slider>.left-arrow {
+    left: calc(1rem + 1%);
+}
+
+.slider>.left-arrow svg {
+    transform: rotate(90deg);
+}
+
+.slider>.right-arrow {
+    right: calc(1rem + 1%);
+}
+
+.slider>.right-arrow svg {
+    transform: rotate(-90deg);
+}
+
+/* #endregion */
+
+/* #region landing-slider styling */
+.landing-slider {
+    height: 50rem;
+}
+
+.landing-slider>.content>div {
+    width: 100%;
+}
+
+/* #endregion */
+
 .title {
     font-size: larger;
 }
