@@ -25,32 +25,36 @@
 }
 
 body[theme=light] {
+    --main-color: #eb561f;
+    --secondary-color: #e26600;
+
     --background-color: white;
     --foreground-color: black;
     --layer1-gray: #F5F5F5;
     --layer2-gray: #E7E7E7;
     --layer3-gray: #d6d6d6;
     --layer4-gray: #7A7A7A;
+    --btn-hover: #f6e3dd;
 
     --shadow: rgba(0, 0, 0, 0.05);
 }
 
 body[theme=dark] {
+    --main-color: #FF6C37;
+    --secondary-color: #ff9137;
+
     --background-color: #212121;
     --foreground-color: white;
     --layer1-gray: #2a2a2a;
     --layer2-gray: #313131;
     --layer3-gray: #414141;
     --layer4-gray: #acacac;
+    --btn-hover: #45322c;
 
     --shadow: rgba(0, 0, 0, 0.3);
 }
 
 body {
-    --main-color: #FF6C37;
-    --trans-main-color: #FF6C3720;
-    --secondary-color: #ff9137;
-
     --main-trans: 200ms;
 
     color: var(--foreground-color);
@@ -728,7 +732,7 @@ button.gray-el:hover,
     color: var(--main-color);
     stroke: var(--main-color) !important;
     border-color: var(--main-color) !important;
-    background-color: var(--trans-main-color);
+    background-color: var(--btn-hover);
 }
 
 .main-el {
