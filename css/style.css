@@ -153,9 +153,17 @@ nav#main-nav {
     z-index: 100;
 }
 
+#header-displacement {
+    height: 8.1315789rem;
+}
+
 @media (max-width:620px) {
     nav#main-nav {
         display: none;
+    }
+
+    #header-displacement {
+        height: 5.0657894rem;
     }
 }
 
