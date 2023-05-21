@@ -209,7 +209,8 @@ nav#main-nav {
     cursor: pointer;
 }
 
-.dropdown:hover {
+.dropdown:hover,
+.dropdown.opened {
     color: var(--main-color);
     transition: var(--main-trans);
 }
@@ -218,7 +219,7 @@ nav#main-nav {
     transition: transform var(--main-trans);
 }
 
-.dropdown:hover .arrow {
+.dropdown.opened .arrow {
     transform: rotate(180deg);
 }
 
@@ -232,7 +233,7 @@ nav#main-nav {
     transition: padding 0ms var(--main-trans), visibility 0ms var(--main-trans);
 }
 
-.dropdown:hover .list {
+.dropdown.opened .list {
     visibility: visible;
     padding-top: 2rem;
     transition: padding 0ms, visibility 0ms;
@@ -249,7 +250,7 @@ nav#main-nav {
     transform: scale(0);
 }
 
-.dropdown:hover .list>div {
+.dropdown.opened .list>div {
     transform: scale(1);
 }
 
@@ -688,6 +689,10 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 .el,
 .el * {
     font-family: 'Thicccboi';
+}
+
+button {
+    all: unset;
 }
 
 button,

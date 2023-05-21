@@ -92,6 +92,14 @@ const buttonClick = new Audio('sounds/button-click.mp3');
     function toggleEl(el){
         el.classList.toggle('opened');
     }
+    
+    function openEl(el) {
+        el.classList.add('opened');    
+    }
+
+    function closeEl(el) {
+        el.classList.remove('opened');    
+    }
 
     function changeTheme(el, animation) {
         if(animation){
