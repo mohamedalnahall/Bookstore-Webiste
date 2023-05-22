@@ -278,20 +278,19 @@ nav#main-nav {
     position: absolute;
     top: 0;
     display: block;
-    height: 3rem;
+    height: 100%;
+    width: 5%;
     z-index: 100;
 }
 
 .hscroll.left-shadow::before {
-    width: 2rem;
     left: 0;
-    background-image: linear-gradient(to right, var(--background-color) 20%, transparent 80%);
+    background-image: linear-gradient(to right, var(--background-color), transparent);
 }
 
 .hscroll.right-shadow::after {
-    width: 2rem;
     right: 0;
-    background-image: linear-gradient(to left, var(--background-color) 20%, transparent 80%);
+    background-image: linear-gradient(to left, var(--background-color), transparent);
 }
 
 .hscroll>div {
