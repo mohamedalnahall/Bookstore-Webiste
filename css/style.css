@@ -897,26 +897,26 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 /* #endregion */
 
 /* #region landing-slider styling */
-.landing-slider {
+#landing-slider {
     height: 30rem;
 }
 
-.landing-slider>.content>div {
+#landing-slider>.content>div {
     background-image: url(../imgs/landing-slider-image.png);
 }
 
 @media (max-width:800px) {
-    .landing-slider {
+    #landing-slider {
         height: 20rem;
     }
 }
 
 @media (max-width:620px) {
-    .landing-slider {
+    #landing-slider {
         height: 25rem;
     }
 
-    .landing-slider>.content>div {
+    #landing-slider>.content>div {
         background-image: url(../imgs/landing-slider-mobile-image.png);
     }
 }
