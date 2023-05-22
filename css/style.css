@@ -758,6 +758,13 @@ button.main-el:hover {
     border: var(--main-color) solid 1px;
 }
 
+.circle {
+    background-color: var(--foreground-color);
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 99rem;
+}
+
 /* #endregion */
 
 /* #region tags styling */
@@ -936,6 +943,34 @@ button.main-el:hover {
         width: 3rem;
         height: 3rem;
     }
+}
+
+/* #endregion */
+
+/* #region location-slot styling */
+#location-slot {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#location-slot>#location-prefix {
+    color: var(--layer4-gray);
+}
+
+#location-slot>#location {
+    font-size: larger;
+}
+
+#location-slot>.circle {
+    margin: 0 0.65rem;
+}
+
+#location-slot>#path>a {
+    color: var(--main-color);
 }
 
 /* #endregion */
