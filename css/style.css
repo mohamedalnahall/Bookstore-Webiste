@@ -869,35 +869,6 @@ button.main-el:hover {
     opacity: 1;
 }
 
-.slider>.left-arrow,
-.slider>.right-arrow {
-    background-color: var(--background-color);
-    border-radius: 999rem;
-    width: 3.5rem;
-    height: 3.5rem;
-    cursor: pointer;
-    position: absolute;
-    transform: translateY(-50%);
-    box-shadow: 0 0.4rem 1.2rem 0.05rem var(--shadow);
-    top: 50%;
-}
-
-.slider>.left-arrow {
-    left: calc(1rem + 1%);
-}
-
-.slider>.left-arrow svg {
-    transform: rotate(90deg);
-}
-
-.slider>.right-arrow {
-    right: calc(1rem + 1%);
-}
-
-.slider>.right-arrow svg {
-    transform: rotate(-90deg);
-}
-
 /* #endregion */
 
 /* #region landing-slider styling */
@@ -917,11 +888,53 @@ button.main-el:hover {
 
 @media (max-width:620px) {
     .landing-slider {
-        height: 30rem;
+        height: 25rem;
     }
 
     .landing-slider>.content>div {
         background-image: url(../imgs/landing-slider-mobile-image.png);
+    }
+}
+
+/* #endregion */
+
+/* #region left & right arrow styling */
+.left-arrow,
+.right-arrow {
+    background-color: var(--background-color);
+    border-radius: 999rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+    box-shadow: 0 0.4rem 1.2rem 0.05rem var(--shadow);
+    top: 50%;
+}
+
+.left-arrow {
+    left: calc(1rem + 1%);
+}
+
+.left-arrow svg {
+    transform: rotate(90deg);
+}
+
+.right-arrow {
+    right: calc(1rem + 1%);
+}
+
+.right-arrow svg {
+    transform: rotate(-90deg);
+}
+
+@media (max-width:620px) {
+
+    .left-arrow,
+    .right-arrow {
+        width: 3rem;
+        height: 3rem;
     }
 }
 
