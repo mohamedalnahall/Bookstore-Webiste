@@ -98,6 +98,14 @@ h1 {
     font-weight: 600;
 }
 
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
 input {
     color: var(--foreground-color);
     padding: 0.75rem 1.25rem;
@@ -185,7 +193,8 @@ button.main-el:hover {
 }
 
 .title {
-    font-size: larger;
+    font-size: 1.3rem;
+    margin: 1.3rem 0;
 }
 
 svg>* {
