@@ -330,7 +330,6 @@ nav#main-nav {
     display: flex;
     align-items: center;
     width: max-content;
-    transition: var(--main-trans);
 }
 
 /* #endregion*/
