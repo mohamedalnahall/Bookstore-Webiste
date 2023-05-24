@@ -270,6 +270,7 @@ nav#main-nav {
 .hscroll {
     overflow-x: clip;
     position: relative;
+    user-select: none;
 }
 
 .hscroll::before,

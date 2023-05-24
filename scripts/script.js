@@ -37,23 +37,41 @@ const buttonClick = new Audio('sounds/button-click.mp3');
         const hscrollContent = hscroll.querySelector('div');
         hscrollContent.style.setProperty('margin-left', '0px');
         setScroll(0, hscroll, hscrollContent);
-        let touchOffset;
+        let offset, posOffset;
         hscroll.addEventListener('wheel', (e)=>{      
             e.preventDefault();            
             let scroll = hscrollContent.style.getPropertyValue('margin-left');
-            let pos = e.deltaY + parseFloat(scroll);
+            let pos = -e.deltaX + parseFloat(scroll);
             setScroll(pos, hscroll, hscrollContent);
         });
-        hscroll.addEventListener('touchstart', (e)=>{
-            touchOffset = e.touches[0].clientX;
+        let isMouseScroll = false;
+        hscroll.addEventListener('mousedown', (e)=>{
+            offset = { x:e.clientX, y:e.clientY };
+            posOffset = parseInt(hscrollContent.style.getPropertyValue('margin-left'));
+            isMouseScroll = true;
         });
-        hscroll.addEventListener('touchmove', (e)=>{   
-            e.preventDefault();  
-            setScroll(e.touches[0].clientX - touchOffset, hscroll, hscrollContent);
-        })
+        document.addEventListener('mousemove', (e) => {
+            if (isMouseScroll) {                                        
+                if (Math.abs(Math.atan((e.clientY - offset.y) / (e.clientX - offset.x))) < Math.PI / 4) {
+                    e.preventDefault();
+                    setScroll(posOffset + e.clientX - offset.x, hscroll, hscrollContent);
+                }
+            }
+        });
+        document.addEventListener('mouseup', (e) => { isMouseScroll = false; });
+        hscroll.addEventListener('touchstart', (e)=>{
+            offset = { x:e.touches[0].clientX, y:e.touches[0].clientY };
+            posOffset = parseInt(hscrollContent.style.getPropertyValue('margin-left'));
+        });
+        hscroll.addEventListener('touchmove', (e) => {                        
+            if (Math.abs(Math.atan((e.touches[0].clientY - offset.y) / (e.touches[0].clientX - offset.x))) < Math.PI / 4) {
+                e.preventDefault();
+                setScroll(posOffset + e.touches[0].clientX - offset.x, hscroll, hscrollContent);
+            }
+        });
         window.addEventListener('resize', ()=>{
             setScroll(parseFloat(hscrollContent.style.getPropertyValue('margin-left')), hscroll, hscrollContent);
-        });        
+        });
     }
 
     function setScroll(pos, scrollEl, contentEl){
