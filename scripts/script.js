@@ -33,20 +33,19 @@ const buttonClick = new Audio('sounds/button-click.mp3');
         }               
     }
     
+    document.querySelectorAll('a').forEach((e) => {
+        e.addEventListener('mousedown', (event) => {
+            event.preventDefault();
+        });
+    })
+    
     for(const hscroll of hscrollElements){
         const hscrollContent = hscroll.querySelector('div');
         hscrollContent.style.setProperty('margin-left', '0px');
         setScroll(0, hscroll, hscrollContent);
         let offset, posOffset;
-        hscroll.addEventListener('wheel', (e)=>{      
-            e.preventDefault();            
-            let scroll = hscrollContent.style.getPropertyValue('margin-left');
-            let pos = -e.deltaX + parseFloat(scroll);
-            setScroll(pos, hscroll, hscrollContent);
-        });
         let isMouseScroll = false;
         hscroll.addEventListener('mousedown', (e) => {
-            e.preventDefault();
             offset = { x:e.clientX, y:e.clientY };
             posOffset = parseInt(hscrollContent.style.getPropertyValue('margin-left'));
             isMouseScroll = true;
