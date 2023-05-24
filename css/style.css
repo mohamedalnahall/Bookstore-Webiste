@@ -36,6 +36,27 @@ body[theme=light] {
     --layer4-gray: #7A7A7A;
     --btn-hover: #f6e3dd;
 
+    --cat1-front-color: #E36D00;
+    --cat1-back-color: #E36D0030;
+
+    --cat2-front-color: #afa001;
+    --cat2-back-color: #afa00130;
+
+    --cat3-front-color: #03cb00;
+    --cat3-back-color: #03cb0030;
+
+    --cat4-front-color: #00b454;
+    --cat4-back-color: #00b45430;
+
+    --cat5-front-color: #0094D3;
+    --cat5-back-color: #0094D330;
+
+    --cat6-front-color: #0030D8;
+    --cat6-back-color: #0030D830;
+
+    --cat7-front-color: #8200E9;
+    --cat7-back-color: #8200E930;
+
     --shadow: rgba(0, 0, 0, 0.05);
 }
 
@@ -50,6 +71,27 @@ body[theme=dark] {
     --layer3-gray: #414141;
     --layer4-gray: #acacac;
     --btn-hover: #45322c;
+
+    --cat1-front-color: #FFBA7A;
+    --cat1-back-color: #FFBA7A30;
+
+    --cat2-front-color: #FCFF7A;
+    --cat2-back-color: #FCFF7A30;
+
+    --cat3-front-color: #ADFF7A;
+    --cat3-back-color: #ADFF7A30;
+
+    --cat4-front-color: #7AFFB7;
+    --cat4-back-color: #7AFFB730;
+
+    --cat5-front-color: #7AD7FF;
+    --cat5-back-color: #7AD7FF30;
+
+    --cat6-front-color: #7A97FF;
+    --cat6-back-color: #7A97FF30;
+
+    --cat7-front-color: #C57AFF;
+    --cat7-back-color: #C57AFF30;
 
     --shadow: rgba(0, 0, 0, 0.3);
 }
@@ -81,16 +123,6 @@ body {
 /* #region elements styling */
 .container {
     margin: 0 3rem;
-}
-
-a {
-    color: var(--foreground-color);
-    text-decoration: none;
-    transition: var(--main-trans);
-}
-
-a:hover {
-    color: var(--main-color) !important;
 }
 
 h1 {
@@ -194,7 +226,7 @@ button.main-el:hover {
 
 .title {
     font-size: 1.3rem;
-    margin: 1.3rem 0;
+    margin: 1.5rem 0;
 }
 
 svg>* {
@@ -922,7 +954,7 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 
 @media (max-width:620px) {
     #landing-slider {
-        height: 25rem;
+        height: 15rem;
     }
 
     #landing-slider>.content>div {
@@ -1001,6 +1033,34 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 }
 
 /* #endregion */
+
+/* #region categories styling */
+#categories .hscroll>div>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12rem;
+    height: 12rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+#categories a {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+/* #endregion */
+
+a {
+    color: var(--foreground-color);
+    text-decoration: none;
+    transition: var(--main-trans);
+}
+
+a:hover {
+    color: var(--main-color);
+}
 
 @media (min-width: 1300px) {
     .container {
