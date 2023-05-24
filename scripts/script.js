@@ -45,7 +45,8 @@ const buttonClick = new Audio('sounds/button-click.mp3');
             setScroll(pos, hscroll, hscrollContent);
         });
         let isMouseScroll = false;
-        hscroll.addEventListener('mousedown', (e)=>{
+        hscroll.addEventListener('mousedown', (e) => {
+            e.preventDefault();
             offset = { x:e.clientX, y:e.clientY };
             posOffset = parseInt(hscrollContent.style.getPropertyValue('margin-left'));
             isMouseScroll = true;
