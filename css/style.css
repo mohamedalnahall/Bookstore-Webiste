@@ -1050,6 +1050,28 @@ body[theme=dark] .theme-changer>svg:last-of-type {
     text-align: center;
 }
 
+@media (max-width:800px) {
+    #categories .hscroll>div>div {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    #categories a {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width:620px) {
+    #categories .hscroll>div>div {
+        width: 8.5rem;
+        height: 8.5rem;
+    }
+
+    #categories a {
+        font-size: 1rem;
+    }
+}
+
 /* #endregion */
 
 a {
