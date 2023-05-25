@@ -709,7 +709,7 @@ nav#main-nav {
     top: 5.065789rem;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100vw - 6rem);
+    width: calc(100% - 6rem);
     height: 0;
     padding-top: 0;
     padding-bottom: 0;
