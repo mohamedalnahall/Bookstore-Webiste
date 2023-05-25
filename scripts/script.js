@@ -1,7 +1,5 @@
-if('ontouchstart' in window) {
-    document.querySelectorAll('swiper-container').forEach(e => {
-        e.setAttribute('css-mode', 'true');
-    })
+if ('ontouchstart' in window) {
+    swiper.cssMode = "true";
 }
 
 const buttonClick = new Audio('sounds/button-click.mp3');
