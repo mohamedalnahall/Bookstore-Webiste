@@ -1030,6 +1030,14 @@ body[theme=dark] .theme-changer>svg:last-of-type {
     }
 }
 
+@media (max-width:520px) {
+
+    .left-arrow,
+    .right-arrow {
+        display: none;
+    }
+}
+
 /* #endregion */
 
 /* #region location-slot styling */
