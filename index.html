@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>BOOKSTORE</title>
     <link rel="icon" href="icons/logo.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body theme="dark">
@@ -186,15 +187,27 @@
         <div class="el section-header">
             <h2>Categories</h2>
         </div>
-        <swiper-container slides-per-view='auto' speed="500" space-between="15" resistance-ratio="0.65">
-            <swiper-slide style="background-color: var(--cat1-back-color); border: 1px solid var(--cat1-front-color);"><a href="" style="color: var(--cat1-front-color);">Arts & Photography</a></swiper-slide>
-            <swiper-slide style="background-color: var(--cat2-back-color); border: 1px solid var(--cat2-front-color);"><a href="" style="color: var(--cat2-front-color);">Biographies & Memoirs</a></swiper-slide>
-            <swiper-slide style="background-color: var(--cat3-back-color); border: 1px solid var(--cat3-front-color);"><a href="" style="color: var(--cat3-front-color);">Business & Money</a></swiper-slide>
-            <swiper-slide style="background-color: var(--cat4-back-color); border: 1px solid var(--cat4-front-color);"><a href="" style="color: var(--cat4-front-color);">Calendars</a></swiper-slide>
-            <swiper-slide style="background-color: var(--cat5-back-color); border: 1px solid var(--cat5-front-color);"><a href="" style="color: var(--cat5-front-color);">Children's Books</a></swiper-slide>
-            <swiper-slide style="background-color: var(--cat6-back-color); border: 1px solid var(--cat6-front-color);"><a href="" style="color: var(--cat6-front-color);">Computers & Technology</a></swiper-slide>
-            <swiper-slide style="background-color: var(--cat7-back-color); border: 1px solid var(--cat7-front-color);"><a href="" style="color: var(--cat7-front-color);">Cookbooks & Food</a></swiper-slide>
-        </swiper-container>
+        <div class="swiper">            
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-color: var(--cat1-back-color); border: 1px solid var(--cat1-front-color);"><a href="" style="color: var(--cat1-front-color);">Arts & Photography</a></div>
+                <div class="swiper-slide" style="background-color: var(--cat2-back-color); border: 1px solid var(--cat2-front-color);"><a href="" style="color: var(--cat2-front-color);">Biographies & Memoirs</a></div>
+                <div class="swiper-slide" style="background-color: var(--cat3-back-color); border: 1px solid var(--cat3-front-color);"><a href="" style="color: var(--cat3-front-color);">Business & Money</a></div>
+                <div class="swiper-slide" style="background-color: var(--cat4-back-color); border: 1px solid var(--cat4-front-color);"><a href="" style="color: var(--cat4-front-color);">Calendars</a></div>
+                <div class="swiper-slide" style="background-color: var(--cat5-back-color); border: 1px solid var(--cat5-front-color);"><a href="" style="color: var(--cat5-front-color);">Children's Books</a></div>
+                <div class="swiper-slide" style="background-color: var(--cat6-back-color); border: 1px solid var(--cat6-front-color);"><a href="" style="color: var(--cat6-front-color);">Computers & Technology</a></div>
+                <div class="swiper-slide" style="background-color: var(--cat7-back-color); border: 1px solid var(--cat7-front-color);"><a href="" style="color: var(--cat7-front-color);">Cookbooks & Food</a></div>        
+            </div>    
+            <div class="swiper-button-next right-arrow btn gray-el">
+                <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="24" height="24" viewBox="0 0 24 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6l6 -6"></path>
+                </svg>
+            </div>
+            <div class="swiper-button-prev left-arrow btn gray-el">
+                <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="24" height="24" viewBox="0 0 24 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6l6 -6"></path>
+                </svg>
+            </div>
+        </div>
     </section>
     <section id="best-sellers" class="container">
         <div class="el section-header">
@@ -205,8 +218,9 @@
                 </svg>
             </a>
         </div>
-        <swiper-container slides-per-view='auto' speed="500" space-between="15" resistance-ratio="0.65">
-            <swiper-slide class="book">
+        <div class="swiper">            
+            <div class="swiper-wrapper">
+                <div class="swiper-slide book">
                     <div class="cover" style="background-image: url('imgs/book\'s\ covers/normal people.png');"></div>
                     <div class="box">
                         <div class="details">
@@ -241,8 +255,8 @@
                             Add to cart
                         </button>
                     </div>
-            </swiper-slide>
-            <swiper-slide class="book">
+                </div>
+                <div class="swiper-slide book">
                     <div class="cover" style="background-image: url('imgs/book\'s\ covers/quiet chaos.png');"></div>
                     <div class="box">
                         <div class="details">
@@ -276,8 +290,8 @@
                             Add to cart
                         </button>
                     </div>
-            </swiper-slide>
-            <swiper-slide class="book">
+                </div>
+                <div class="swiper-slide book">
                     <div class="cover" style="background-image: url('imgs/book\'s\ covers/the silent patient.png');"></div>
                     <div class="box">
                         <div class="details">
@@ -310,8 +324,8 @@
                             Add to cart
                         </button>
                     </div>
-            </swiper-slide>
-            <swiper-slide class="book">
+                </div>
+                <div class="swiper-slide book">
                     <div class="cover" style="background-image: url('imgs/book\'s\ covers/change your life in 7 days.png');"></div>
                     <div class="box">
                         <div class="details">
@@ -344,8 +358,8 @@
                             Add to cart
                         </button>
                     </div>
-            </swiper-slide>
-            <swiper-slide class="book">
+                </div>
+                <div class="swiper-slide book">
                     <div class="cover" style="background-image: url('imgs/book\'s\ covers/26 years behind bars.png');"></div>
                     <div class="box">
                         <div class="details">
@@ -380,8 +394,8 @@
                             Add to cart
                         </button>
                     </div>
-            </swiper-slide>
-            <swiper-slide class="book">
+                </div>
+                <div class="swiper-slide book">
                     <div class="cover" style="background-image: url('imgs/book\'s\ covers/australia monarchy.png');"></div>
                     <div class="box">
                         <div class="details">
@@ -414,8 +428,8 @@
                             Add to cart
                         </button>
                     </div>
-            </swiper-slide>
-            <swiper-slide class="book">
+                </div>
+                <div class="swiper-slide book">
                     <div class="cover" style="background-image: url('imgs/book\'s\ covers/the netherlands.png');"></div>
                     <div class="box">
                         <div class="details">
@@ -448,8 +462,19 @@
                             Add to cart
                         </button>
                     </div>
-            </swiper-slide>     
-        </swiper-container>
+                </div> 
+            </div>    
+            <div class="swiper-button-next right-arrow btn gray-el">
+                <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="24" height="24" viewBox="0 0 24 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6l6 -6"></path>
+                </svg>
+            </div>
+            <div class="swiper-button-prev left-arrow btn gray-el">
+                <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="24" height="24" viewBox="0 0 24 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6l6 -6"></path>
+                </svg>
+            </div>
+        </div>
     </section>
     <section id="most-popular" class="container">
         <div class="el section-header">
@@ -460,8 +485,9 @@
                 </svg>
             </a>
         </div>
-        <swiper-container slides-per-view='auto' speed="500" space-between="15" resistance-ratio="0.65">
-            <swiper-slide class="book">
+        <div class="swiper">            
+            <div class="swiper-wrapper">
+                <div class="swiper-slide book">
                     <div class="cover" style="background-image: url('imgs/book\'s\ covers/the stolen heir.png');"></div>
                     <div class="box">
                         <div class="details">
@@ -495,8 +521,8 @@
                             Add to cart
                         </button>
                     </div>
-            </swiper-slide>
-            <swiper-slide class="book">
+                </div>
+                <div class="swiper-slide book">
                     <div class="cover" style="background-image: url('imgs/book\'s\ covers/kill joy.png');"></div>
                     <div class="box">
                         <div class="details">
@@ -530,8 +556,8 @@
                             Add to cart
                         </button>
                     </div>
-            </swiper-slide>
-            <swiper-slide class="book">
+                </div>
+                <div class="swiper-slide book">
                     <div class="cover" style="background-image: url('imgs/book\'s\ covers/26 years behind bars.png');"></div>
                     <div class="box">
                         <div class="details">
@@ -566,8 +592,8 @@
                             Add to cart
                         </button>
                     </div>
-            </swiper-slide>
-            <swiper-slide class="book">
+                </div>
+                <div class="swiper-slide book">
                     <div class="cover" style="background-image: url('imgs/book\'s\ covers/australia monarchy.png');"></div>
                     <div class="box">
                         <div class="details">
@@ -600,8 +626,8 @@
                             Add to cart
                         </button>
                     </div>
-            </swiper-slide>
-            <swiper-slide class="book">
+                </div>
+                <div class="swiper-slide book">
                     <div class="cover" style="background-image: url('imgs/book\'s\ covers/a handbook for new company directors.png');"></div>
                     <div class="box">
                         <div class="details">
@@ -634,8 +660,8 @@
                             Add to cart
                         </button>
                     </div>
-            </swiper-slide>
-            <swiper-slide class="book">
+                </div>
+                <div class="swiper-slide book">
                     <div class="cover" style="background-image: url('imgs/book\'s\ covers/change your life in 7 days.png');"></div>
                     <div class="box">
                         <div class="details">
@@ -668,8 +694,8 @@
                             Add to cart
                         </button>
                     </div>
-            </swiper-slide>
-            <swiper-slide class="book">
+                </div>
+                <div class="swiper-slide book">
                     <div class="cover" style="background-image: url('imgs/book\'s\ covers/the netherlands.png');"></div>
                     <div class="box">
                         <div class="details">
@@ -702,10 +728,32 @@
                             Add to cart
                         </button>
                     </div>
-            </swiper-slide>
-        </swiper-container>
+                </div>
+            </div>    
+            <div class="swiper-button-next right-arrow btn gray-el">
+                <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="24" height="24" viewBox="0 0 24 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6l6 -6"></path>
+                </svg>
+            </div>
+            <div class="swiper-button-prev left-arrow btn gray-el">
+                <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="24" height="24" viewBox="0 0 24 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9l6 6l6 -6"></path>
+                </svg>
+            </div>
+        </div>
     </section>
 </body>
     <script src="scripts/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper", {  
+            slidesPerView: 'auto',
+            spaceBetween: 15,
+            resistanceRatio: 0.65,
+            navigation: {
+                nextEl: ".right-arrow",
+                prevEl: ".left-arrow",
+            },
+        });
+    </script>
 </html>

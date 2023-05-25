@@ -1,3 +1,9 @@
+if('ontouchstart' in window) {
+    document.querySelectorAll('swiper-container').forEach(e => {
+        e.setAttribute('css-mode', 'true');
+    })
+}
+
 const buttonClick = new Audio('sounds/button-click.mp3');
     const searchBox = document.getElementById('search-box');
     const searchInput = searchBox.querySelector("input[type=search]");
@@ -32,12 +38,6 @@ const buttonClick = new Audio('sounds/button-click.mp3');
             resetTrans();
         }               
     }
-    
-    // document.querySelectorAll('a').forEach((e) => {
-    //     e.addEventListener('mousedown', (event) => {
-    //         event.preventDefault();
-    //     });
-    // })
     
     for(const hscroll of hscrollElements){
         const hscrollContent = hscroll.querySelector('div');

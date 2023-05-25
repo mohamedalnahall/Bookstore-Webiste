@@ -1073,7 +1073,7 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 /* #endregion */
 
 /* #region categories styling */
-#categories swiper-slide {
+#categories .swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1089,7 +1089,7 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 }
 
 @media (max-width:800px) {
-    #categories swiper-slide {
+    #categories .swiper-slide {
         width: 10rem;
         height: 10rem;
     }
@@ -1100,7 +1100,7 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 }
 
 @media (max-width:620px) {
-    #categories swiper-slide {
+    #categories .swiper-slide {
         width: 8.5rem;
         height: 8.5rem;
     }
@@ -1185,6 +1185,16 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 }
 
 /* #endregion */
+
+.swiper-button-next,
+.swiper-button-prev {
+    transform: unset;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    all: unset !important;
+}
 
 a {
     color: var(--foreground-color);
