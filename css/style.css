@@ -350,6 +350,7 @@ nav#main-nav {
     display: flex;
     align-items: center;
     width: max-content;
+    transition: var(--main-trans);
 }
 
 /* #endregion*/
@@ -1072,7 +1073,7 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 /* #endregion */
 
 /* #region categories styling */
-#categories .hscroll>div>div {
+#categories swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1088,7 +1089,7 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 }
 
 @media (max-width:800px) {
-    #categories .hscroll>div>div {
+    #categories swiper-slide {
         width: 10rem;
         height: 10rem;
     }
@@ -1099,7 +1100,7 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 }
 
 @media (max-width:620px) {
-    #categories .hscroll>div>div {
+    #categories swiper-slide {
         width: 8.5rem;
         height: 8.5rem;
     }

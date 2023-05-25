@@ -33,32 +33,24 @@ const buttonClick = new Audio('sounds/button-click.mp3');
         }               
     }
     
-    document.querySelectorAll('a').forEach((e) => {
-        e.addEventListener('mousedown', (event) => {
-            event.preventDefault();
-        });
-    })
+    // document.querySelectorAll('a').forEach((e) => {
+    //     e.addEventListener('mousedown', (event) => {
+    //         event.preventDefault();
+    //     });
+    // })
     
     for(const hscroll of hscrollElements){
         const hscrollContent = hscroll.querySelector('div');
         hscrollContent.style.setProperty('margin-left', '0px');
         setScroll(0, hscroll, hscrollContent);
         let offset, posOffset;
-        let isMouseScroll = false;
-        hscroll.addEventListener('mousedown', (e) => {
-            offset = { x:e.clientX, y:e.clientY };
-            posOffset = parseInt(hscrollContent.style.getPropertyValue('margin-left'));
-            isMouseScroll = true;
+        hscroll.addEventListener('wheel', (e)=>{      
+            e.preventDefault();            
+            let scroll = hscrollContent.style.getPropertyValue('margin-left');
+            let delta = Math.max(Math.abs(e.deltaY), Math.abs(e.deltaX)) === Math.abs(e.deltaY) ? e.deltaY : -e.deltaX;
+            let pos = delta + parseFloat(scroll);
+            setScroll(pos, hscroll, hscrollContent);
         });
-        document.addEventListener('mousemove', (e) => {
-            if (isMouseScroll) {                                        
-                if (Math.abs(Math.atan((e.clientY - offset.y) / (e.clientX - offset.x))) < Math.PI / 4) {
-                    e.preventDefault();
-                    setScroll(posOffset + e.clientX - offset.x, hscroll, hscrollContent);
-                }
-            }
-        });
-        document.addEventListener('mouseup', (e) => { isMouseScroll = false; });
         hscroll.addEventListener('touchstart', (e)=>{
             offset = { x:e.touches[0].clientX, y:e.touches[0].clientY };
             posOffset = parseInt(hscrollContent.style.getPropertyValue('margin-left'));
