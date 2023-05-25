@@ -1039,10 +1039,6 @@ body[theme=dark] .theme-changer>svg:last-of-type {
     color: var(--layer4-gray);
 }
 
-#location-slot>#location {
-    font-size: larger;
-}
-
 #location-slot>.circle {
     margin: 0 0.65rem;
 }
