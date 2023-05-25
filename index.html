@@ -745,7 +745,12 @@
 </body>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".swiper", {  
+        let cssModeValue = false;
+        if ('ontouchstart' in window) {
+            cssModeValue = true;
+        }
+        var swiper = new Swiper(".swiper", { 
+            cssMode: cssModeValue, 
             slidesPerView: 'auto',
             spaceBetween: 15,
             resistanceRatio: 0.65,

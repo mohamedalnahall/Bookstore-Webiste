@@ -1,7 +1,3 @@
-if ('ontouchstart' in window) {
-    swiper.cssMode = "true";
-}
-
 const buttonClick = new Audio('sounds/button-click.mp3');
     const searchBox = document.getElementById('search-box');
     const searchInput = searchBox.querySelector("input[type=search]");
