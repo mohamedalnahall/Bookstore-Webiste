@@ -57,6 +57,9 @@ body[theme=light] {
     --cat7-front-color: #8200E9;
     --cat7-back-color: #8200E930;
 
+    --star-color: var(--main-color);
+    --star-background-color: #eb561f60;
+
     --shadow: rgba(0, 0, 0, 0.05);
 }
 
@@ -92,6 +95,9 @@ body[theme=dark] {
 
     --cat7-front-color: #C57AFF;
     --cat7-back-color: #C57AFF30;
+
+    --star-color: var(--main-color);
+    --star-background-color: #FF6C3780;
 
     --shadow: rgba(0, 0, 0, 0.3);
 }
@@ -224,9 +230,23 @@ button.main-el:hover {
     border-radius: 99rem;
 }
 
-.title {
-    font-size: 1.3rem;
-    margin: 1.5rem 0;
+.stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+
+    display: inline-block;
+    font-size: 1.75rem;
+    line-height: 1;
+}
+
+.stars::before {
+    content: "★★★★★";
+    letter-spacing: 3px;
+    background: linear-gradient(90deg,
+            var(--star-color) var(--percent),
+            var(--star-background-color) var(--percent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 svg>* {
@@ -842,7 +862,7 @@ body[theme=dark] .theme-changer>svg:last-of-type {
     height: 100%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    width: 5px;
+    width: 3px;
 }
 
 .tag.bs {
@@ -1033,6 +1053,28 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 
 /* #endregion */
 
+/* #region section styling */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+.section-header>h2 {
+    font-size: 1.3rem;
+}
+
+.section-header>.btn {
+    padding: 0.2rem 0.5rem 0.2rem 1rem;
+}
+
+.section-header>.btn>.arrow {
+    transform: rotate(-90deg);
+}
+
+/* #endregion */
+
 /* #region categories styling */
 #categories .hscroll>div>div {
     display: flex;
@@ -1069,6 +1111,80 @@ body[theme=dark] .theme-changer>svg:last-of-type {
     #categories a {
         font-size: 1rem;
     }
+}
+
+/* #endregion */
+
+/* #region book styling */
+.book {
+    width: 15rem;
+    border: 1px solid var(--layer3-gray);
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+.book .cover {
+    height: 13rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.book .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.book .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 0.5rem;
+    height: 15rem;
+    overflow: auto;
+}
+
+.book .tags {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.book .info {
+    line-height: 1.3;
+}
+
+.book .info>h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.book .info>span {
+    color: var(--layer4-gray);
+    font-size: 0.9rem;
+}
+
+.book .info>.authour {
+    text-decoration: underline;
+}
+
+.book .price {
+    font-size: 1.2rem;
+}
+
+.book .old-price {
+    font-size: 1rem;
+    color: var(--layer4-gray);
+}
+
+.book .format {
+    font-size: 0.9rem;
+    color: var(--layer4-gray);
 }
 
 /* #endregion */
