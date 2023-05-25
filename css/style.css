@@ -263,6 +263,12 @@ kbd {
     box-shadow: #FF6C37 0 0 5px 0px;
 }
 
+@media (max-width:800px) {
+    .stars {
+        font-size: 1.5rem;
+    }
+}
+
 /* #endregion */
 
 /* #region header & main-nav styling */
@@ -1116,7 +1122,7 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 .book {
     width: 15rem;
     border: 1px solid var(--layer3-gray);
-    border-radius: 1.2rem;
+    border-radius: 1.3rem;
     overflow: hidden;
 }
 
@@ -1182,6 +1188,40 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 .book .format {
     font-size: 0.9rem;
     color: var(--layer4-gray);
+}
+
+@media (max-width:800px) {
+    .book {
+        width: 12rem;
+    }
+
+    .book .cover {
+        height: 11rem;
+    }
+
+    .book .box {
+        padding: 0.75rem;
+    }
+
+    .book .info>h3 {
+        font-size: 1.1rem;
+    }
+
+    .book .info>span {
+        font-size: 0.8rem;
+    }
+
+    .book .info>.authour {
+        font-size: 0.9rem;
+    }
+
+    .book .price {
+        font-size: 1.1rem;
+    }
+
+    .book .format {
+        font-size: 0.8rem;
+    }
 }
 
 /* #endregion */
