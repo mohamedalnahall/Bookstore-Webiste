@@ -923,9 +923,6 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 }
 
 .slider .swiper-slide {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     height: 100%;
     width: 100%;
 }
@@ -1092,10 +1089,14 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 }
 
 .book .cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 13rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+}
+
+.book img {
+    max-height: 100%;
 }
 
 .book .box {
