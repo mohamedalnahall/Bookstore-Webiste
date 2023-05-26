@@ -917,18 +917,7 @@ body[theme=dark] .theme-changer>svg:last-of-type {
     position: relative;
 }
 
-.slider>.content {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transition: left var(--main-trans);
-}
-
-.slider>.content>div {
+.slider .swiper-slide {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -936,56 +925,19 @@ body[theme=dark] .theme-changer>svg:last-of-type {
     width: 100%;
 }
 
-.slider>.dots {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.slider>.dots>div {
-    background-color: var(--background-color);
-    border: var(--layer3-gray) 1px solid;
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 999rem;
-    opacity: 0.5;
-}
-
-.slider>.dots>.curr-dot {
-    opacity: 1;
-}
-
 /* #endregion */
 
 /* #region landing-slider styling */
-#landing-slider {
-    height: 30rem;
+#landing-slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 40rem;
 }
 
-#landing-slider>.content>div {
-    background-image: url(../imgs/landing-slider-image.png);
-}
-
-@media (max-width:800px) {
-    #landing-slider {
-        height: 20rem;
-    }
-}
-
-@media (max-width:620px) {
-    #landing-slider {
-        height: 15rem;
-    }
-
-    #landing-slider>.content>div {
-        background-image: url(../imgs/landing-slider-mobile-image.png);
-    }
+#landing-slider img {
+    min-width: 100%;
+    max-width: 100%;
 }
 
 /* #endregion */
@@ -1234,6 +1186,7 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 
 /* #endregion */
 
+/* #region swiper styling */
 .swiper-button-next,
 .swiper-button-prev {
     transform: unset;
@@ -1243,6 +1196,18 @@ body[theme=dark] .theme-changer>svg:last-of-type {
 .swiper-button-prev::after {
     all: unset !important;
 }
+
+.swiper-pagination-bullet {
+    background-color: var(--background-color);
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--main-color);
+    opacity: 1;
+}
+
+/* #endregion */
 
 a {
     color: var(--foreground-color);

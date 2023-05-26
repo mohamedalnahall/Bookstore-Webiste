@@ -166,22 +166,28 @@
         </span>
     </div>
     <div id="landing-slider" class="slider container">
-        <div class="content">
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="imgs/landing-slider-image.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="imgs/landing-slider-image.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="imgs/landing-slider-image.png" alt="">
+            </div>
         </div>
-        <div class="left-arrow btn gray-el">
+        <div class="swiper-button-next right-arrow btn gray-el">
             <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="24" height="24" viewBox="0 0 24 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M6 9l6 6l6 -6"></path>
             </svg>
         </div>
-        <div class="right-arrow btn gray-el">
+        <div class="swiper-button-prev left-arrow btn gray-el">
             <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="24" height="24" viewBox="0 0 24 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M6 9l6 6l6 -6"></path>
             </svg>
         </div>
-        <div class="dots"></div>
+        <div class="swiper-pagination"></div>
     </div>
     <section id="categories" class="container">
         <div class="el section-header">
@@ -757,6 +763,18 @@
             navigation: {
                 nextEl: ".right-arrow",
                 prevEl: ".left-arrow",
+            },
+        });
+
+        var swiper = new Swiper(".slider", { 
+            cssMode: cssModeValue, 
+            resistanceRatio: 0.65,
+            navigation: {
+                nextEl: ".right-arrow",
+                prevEl: ".left-arrow",
+            },
+            pagination: {
+                el: ".swiper-pagination",
             },
         });
     </script>
