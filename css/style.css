@@ -61,6 +61,7 @@ body[theme=light] {
     --star-background-color: #eb561f60;
 
     --shadow: rgba(0, 0, 0, 0.05);
+    --dark-shadow: rgba(0, 0, 0, 0.15);
 }
 
 body[theme=dark] {
@@ -100,6 +101,7 @@ body[theme=dark] {
     --star-background-color: #FF6C3780;
 
     --shadow: rgba(0, 0, 0, 0.3);
+    --dark-shadow: rgba(0, 0, 0, 0.7);
 }
 
 body {
@@ -720,6 +722,7 @@ nav#main-nav {
     transition-duration: calc(var(--main-trans)*2);
     transition-property: height;
     z-index: 101;
+    box-shadow: 0 0.2rem 0.5rem 0.1rem var(--dark-shadow);
 }
 
 #menu>div {
