@@ -333,21 +333,23 @@ nav#main-nav {
 
 .hscroll::before,
 .hscroll::after {
+    display: none;
     content: "";
     position: absolute;
     top: 0;
-    display: block;
     height: 100%;
     width: 5%;
     z-index: 100;
 }
 
 .hscroll.left-shadow::before {
+    display: block;
     left: 0;
     background-image: linear-gradient(to right, var(--background-color), transparent);
 }
 
 .hscroll.right-shadow::after {
+    display: block;
     right: 0;
     background-image: linear-gradient(to left, var(--background-color), transparent);
 }
