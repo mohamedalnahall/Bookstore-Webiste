@@ -724,7 +724,7 @@ nav#main-nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100% - 7rem);
+    height: 100%;
     padding: 0.5rem 0.25rem;
     overflow: auto;
 }
